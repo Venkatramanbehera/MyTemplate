@@ -1,14 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import RootStackNavigator from './src/navigation/RootStackNavigator';
+import {SafeAreaView, StyleSheet} from 'react-native';
+import {colors} from './src/assets/colors/colors';
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView style={styles.root}>
+      <RootStackNavigator />
+    </SafeAreaView>
   );
 };
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  root: {flex: 1, backgroundColor: colors.primary},
+});
