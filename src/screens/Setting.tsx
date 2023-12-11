@@ -1,10 +1,11 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import Header from '../components/Header';
 
 const Setting = () => {
   return (
     <View>
-      <Text>Setting</Text>
+      <Header screen="Settings" />
     </View>
   );
 };

@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from '../screens/Splash';
 import AuthNavigation from './auth';
 import BottomTabNavigator from './BottomTab';
+import DrawerNavigation from './drawer';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,9 +12,7 @@ const RootStackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="BTN">
-        <Stack.Group>
-          <Stack.Screen name="Auth" component={AuthNavigation} />
-        </Stack.Group>
+        <Stack.Screen name="Auth" component={AuthNavigation} />
         <Stack.Screen
           name="Splash"
           component={Splash}
@@ -21,13 +20,12 @@ const RootStackNavigator = () => {
             headerShown: false,
           }}
         />
-        <Stack.Group>
-          <Stack.Screen
-            name="BTN"
-            component={BottomTabNavigator}
-            options={{headerShown: false}}
-          />
-        </Stack.Group>
+        <Stack.Screen
+          name="BTN"
+          component={BottomTabNavigator}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="Drawer" component={DrawerNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

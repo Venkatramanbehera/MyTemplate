@@ -8,6 +8,7 @@ import {HomeTab, ProfileTab, SettingTab} from '../../assets/images';
 import {widthScale} from '../../utils/responsive.utils';
 import {colors} from '../../assets/colors/colors';
 import {useRoute} from '@react-navigation/native';
+// import CustomTabBar from './CustomTabBar';
 
 type TabBarIconProps = {
   focused: boolean;
