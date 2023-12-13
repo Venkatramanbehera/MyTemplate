@@ -1,4 +1,3 @@
-// import {StyleSheet} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Saved from '../../screens/Saved';
@@ -23,5 +22,3 @@ const DrawerNavigation = () => {
 };
 
 export default DrawerNavigation;
-
-// const styles = StyleSheet.create({});

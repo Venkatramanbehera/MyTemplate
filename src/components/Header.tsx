@@ -3,7 +3,7 @@ import React from 'react';
 import {colors} from '../assets/colors/colors';
 import {heightScale, widthScale} from '../utils/responsive.utils';
 import {HamburgerMenu} from '../assets/images';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, DrawerActions} from '@react-navigation/native';
 
 interface HeaderProps {
   screen: string;
@@ -14,7 +14,10 @@ const Header = (props: HeaderProps) => {
   const navigation = useNavigation();
   return (
     <View style={styles.root}>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          // navigation.dispatch(DrawerActions.openDrawer());
+        }}>
         <Image
           resizeMode="contain"
           source={HamburgerMenu}
